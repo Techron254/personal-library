@@ -21,6 +21,26 @@ function displayBooks() {
             `;
         tbody.appendChild(row);
     }
+    const statusButtons = document.querySelectorAll('#status-button');
+    statusButtons.forEach((button, index) => {
+    if (button.textContent === 'Read') {
+        button.id = 'read';
+        }
+        else {
+            button.id = 'unread';
+        }
+    button.addEventListener('click', () => {
+        if (button.textContent === 'Read') {
+            button.textContent = 'Unread';
+            button.id = 'unread';
+            books[index].status = 'Unread';
+        } else {
+            button.textContent = 'Read';
+            button.id = 'read';
+            books[index].status = 'Read';
+        }
+});
+});
 }
 displayBooks();
 
@@ -70,26 +90,3 @@ submitBookButton.addEventListener('click', (event) => {
     const dialog = document.getElementById('add-book-dialog');
     dialog.close();
 });
-const statusButtons = document.querySelectorAll('#status-button');
-function updateStatusButtons() {
-statusButtons.forEach((button, index) => {
-    if (button.textContent === 'Read') {
-        button.id = 'read';
-        }
-        else {
-            button.id = 'unread';
-        }
-    button.addEventListener('click', () => {
-        if (button.textContent === 'Read') {
-            button.textContent = 'Unread';
-            button.id = 'unread';
-            books[index].status = 'Unread';
-        } else {
-            button.textContent = 'Read';
-            button.id = 'read';
-            books[index].status = 'Read';
-        }
-});
-});
-}
-updateStatusButtons();

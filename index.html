@@ -43,13 +43,12 @@
             <label for="pages">Pages:</label>
             <input type="number" id="pages" name="pages" required>
             <label for="status">Status:</label>
-            <select id="status" name="status" required>
-                <option value="Read">Read</option>
-                <option value="Unread">Unread</option>
-                <option value="Currently-reading">Currently-reading</option>
-            </select>
+            <input type="radio" id="read" name="status" value="read" required>
+            <label for="read">Read</label>  
+            <input type="radio" id="unread" name="status" value="unread" required>
+            <label for="unread">Unread</label>
             <br>
-            <button id="submit-book" type="submit">Add Book</button>
+            <button id="submit-book" type="submit">Add Book</button
         </dialog>
         <script src="./main.js"></script>
 </body>
