@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <header>
+            <h1>Jakaleo's personal library</h1>
+        </header>
+
+        <div class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Pages</th>]
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+            </tbody>
+            
+        </table>
+        <button id="add-book">Add book</button>
+        
+        </div>
+        <dialog id="add-book-dialog">
+            <form action="" method="dialog"></form>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <br>    
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <br>
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+            <br>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages" required>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Read">Read</option>
+                <option value="Unread">Unread</option>
+                <option value="Currently-reading">Currently-reading</option>
+            </select>
+            <br>
+            <button id="submit-book" type="submit">Add Book</button>
+        </dialog>
+        <script src="./main.js"></script>
+</body>
+</html>

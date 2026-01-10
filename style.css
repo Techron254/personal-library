@@ -8,13 +8,13 @@ header{
     padding: 2rem;
     text-align: center;
     font-size: 1rem;
-    color: rgb(18, 121, 139);
-    text-shadow: 0 3px 1px #796c6cdf;
+    color: rgb(20, 97, 110);
+    text-shadow: 0 3px 1px #c1dde4df;
     border-bottom: 2px solid #000;
 }
 .main-content{
     background-color: rgba(177, 194, 195, 0.543);
-    height: 100%;
+    height: minmax(100vh, 100%);
     padding: 1rem;
     padding-top: 3rem;
 }
@@ -44,4 +44,104 @@ tr:nth-child(odd){
     font-weight: 600;
     color: #123f45;
     font-style: italic;
+}
+#add-book{
+    background-color: #123f45d8;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+#add-book:hover {
+    background-color: #182e3e;
+}
+
+#add-book:active{
+    color: #ffffff;
+    background-color: #286a89;
+    border: 1px solid #008cff;
+}
+dialog{
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.644);
+}
+label{
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+select{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#submit-book{
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #6c9da1df;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#submit-book:hover{
+    background-color: #567a7d;
+}
+#submit-book:active{
+    background-color: #345456;
+    color: #167693;
+}
+#status-button{
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: #db855d; */
+    width: 100%;
+}
+#read{
+    background-color: #408a83;
+    color: white;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+
+}
+#unread{
+    background-color: #224344;
+    color: white;
+    width: 100%;
+    border: none;   
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
 }
