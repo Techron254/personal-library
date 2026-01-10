@@ -56,7 +56,7 @@ submitBookButton.addEventListener('click', (event) => {
     const authorInput = document.getElementById('author');
     const yearInput = document.getElementById('year');
     const pagesInput = document.getElementById('pages');
-    const statusInput = document.getElementById('status');
+    const statusInput = document.querySelector('input[name="status"]:checked');
     
     const newBook = {
         title: titleInput.value,
@@ -87,6 +87,13 @@ submitBookButton.addEventListener('click', (event) => {
     books.push(newBook);
     tbody.innerHTML = '';
     displayBooks();
-    const dialog = document.getElementById('add-book-dialog');
     dialog.close();
 });
+
+    const dialog = document.getElementById('add-book-dialog');
+    dialog.close();
+    const dialogCloseButton = document.getElementById('close-dialog');
+    dialogCloseButton.addEventListener('click', () => {
+        dialog.close();
+    }
+    );
