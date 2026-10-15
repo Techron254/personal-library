@@ -39,8 +39,8 @@ function displayBooks() {
             button.id = 'read';
             books[index].status = 'Read';
         }
-});
-});
+})
+})
 }
 displayBooks();
 
